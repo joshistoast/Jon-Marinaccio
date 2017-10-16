@@ -255,6 +255,7 @@ form {
 		}
 		&:focus {
 			border-bottom: 2px solid $dark-grey;
+			background: $light-grey;
 		}
 	}
 	button[name="submit"] {
@@ -266,8 +267,12 @@ form {
 		width: 100%;
 		transition: $medium;
 		font-family: inherit;
+		outline: none;
 		&:hover {
 			border-color: $dark-grey;
+		}
+		&:focus {
+			background: $light-grey;
 		}
 	}
 	textarea[name="message"] {
