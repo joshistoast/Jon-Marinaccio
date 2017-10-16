@@ -155,6 +155,7 @@ a {
     display: block;
     transition: all 200ms ease;
     background: rgba(255, 255, 255, 0); }
+<<<<<<< HEAD
   .gallery-container__item:hover {
     filter: contrast(1.7); }
     .gallery-container__item:hover::after {
@@ -162,6 +163,13 @@ a {
       top: 50%; }
     .gallery-container__item:hover::before {
       background: rgba(255, 255, 255, 0.5); }
+=======
+  .gallery-container__item:hover::after {
+    opacity: 1;
+    top: 50%; }
+  .gallery-container__item:hover::before {
+    background: rgba(255, 255, 255, 0.5); }
+>>>>>>> dev
   .gallery-container__item:active {
     transform: scale(0.95); }
 
@@ -232,7 +240,12 @@ form {
       border-color: #8e8e8e; }
     form input:focus,
     form textarea:focus {
+<<<<<<< HEAD
       border-bottom: 2px solid #8e8e8e; }
+=======
+      border-bottom: 2px solid #8e8e8e;
+      background: #efefef; }
+>>>>>>> dev
   form button[name="submit"] {
     border: 2px solid #cccccc;
     border-radius: 3px;
@@ -241,9 +254,18 @@ form {
     cursor: pointer;
     width: 100%;
     transition: all 130ms ease;
+<<<<<<< HEAD
     font-family: inherit; }
     form button[name="submit"]:hover {
       border-color: #8e8e8e; }
+=======
+    font-family: inherit;
+    outline: none; }
+    form button[name="submit"]:hover {
+      border-color: #8e8e8e; }
+    form button[name="submit"]:focus {
+      background: #efefef; }
+>>>>>>> dev
   form textarea[name="message"] {
     resize: none;
     height: 10em; }
