@@ -155,11 +155,13 @@ a {
     display: block;
     transition: all 200ms ease;
     background: rgba(255, 255, 255, 0); }
-  .gallery-container__item:hover::after {
-    opacity: 1;
-    top: 50%; }
-  .gallery-container__item:hover::before {
-    background: rgba(255, 255, 255, 0.5); }
+  .gallery-container__item:hover {
+    filter: contrast(1.7); }
+    .gallery-container__item:hover::after {
+      opacity: 1;
+      top: 50%; }
+    .gallery-container__item:hover::before {
+      background: rgba(255, 255, 255, 0.5); }
   .gallery-container__item:active {
     transform: scale(0.95); }
 
