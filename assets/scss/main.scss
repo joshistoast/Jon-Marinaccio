@@ -1,0 +1,332 @@
+@import "_variables.scss";
+@import "../css/flexboxgrid.css";
+@import "../css/normalize.css";
+@import "../css/lightbox.css";
+@import "../fonts/CopperplateGothic/stylesheet.css";
+
+/**
+*  SITE SETTINGS
+*  ---------------------------------------------------------------------------------
+*
+*  CONTENTS
+*  --------
+*  -SETTINGS-
+*  Config ........................ Configuration and environment settings.
+*	 Typography .................... Configuration of text styles
+*  Global ........................ Globally-available variables and settings/config.
+*
+*  -ELEMENTS-
+*  Page .......................... Page-specific Styles (HTML)
+*  Headings ...................... Heading Styles
+*  Footers ....................... Footer Styles
+*
+*  -OBJECTS-
+*  Wrappers ...................... Wrappers and page containers
+*
+*  -COMPONENTS-
+*  Primary Navigation ............ Homepage Page Navigation
+*  Buttons ....................... Button Elements
+*
+*  -RESPONSIVE SETTINGS-
+*
+*
+*/
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+//Config
+
+* {box-sizing: border-box};
+
+body {
+	background: $white;
+	overflow-x: hidden;
+	margin-top: 1em;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+//Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+.title {
+	font-family: $header-font!important;
+}
+.site-title {
+	font-size: 50px!important;
+}
+
+p,
+div,
+ul {
+	font-family: $body-font;
+}
+
+a {
+	color: $off-black;
+	text-decoration: underline;
+	transition: $medium;
+	&:hover {
+		color: $dark-grey;
+	}
+}
+
+.page {
+	margin: 2em 0;
+	display: block;
+	position: relative;
+
+	h2 {
+		font-size: 2rem;
+	}
+}
+
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+//Headings
+
+//Footers
+
+.site-footer {
+	padding: 2em;
+	margin: 2em 0 0 0;
+	p {
+		margin: 0;
+		color: $dark-grey;
+	}
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+//Gallery
+	
+	.gallery-container {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.gallery-container__item {
+		width: 30%;
+		position: relative;
+		display: inline-block;
+		margin: 0.5em;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: $slow;
+		}
+		&::after {
+			content: 'View';
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-family: $special-font;
+			font-size: 1.3rem;
+			color: $off-black;
+			opacity: 0;
+			transition: $slow;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: block;
+			transition: $slow;
+			background: rgba($white,0);
+		}
+		&:hover {
+			&::after  { 
+				opacity: 1;
+				top: 50%;
+			}
+			&::before { background: rgba($white,0.5) }
+		}
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+//Primary Navigation
+
+	.site-nav {
+		display: flex;
+		flex-direction: column;
+		padding: 1em 0 1.5em 0;
+	}
+	.site-nav__list {
+		display: flex;
+
+		.site-title {
+			font-weight: normal;
+			font-size: 36px;
+			margin: 0.5em 0;
+			padding: 0.2em;
+		}
+		.nav-item {
+			font-family: $special-font;
+			font-size: 1.1rem;
+			display: block;
+			margin: 0.5em;
+			padding: 0.5em 1em;
+			text-decoration: none;
+		}
+	}
+
+//Panels
+
+.background {
+
+}
+
+//Hero Image
+
+.home-hero {
+	width: 100%;
+	height: 25em;
+	background: url("../img/landscape1.jpeg");
+	background-position: 50% 25%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 2em 0;
+}
+
+//About Container
+.about-container {
+	overflow: hidden;
+}
+
+//Profile Image
+
+.profile-container {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background: url('../img/profile.jpeg');
+	background-position: 50% 30%;
+	background-size: cover;
+}
+
+//Email Form
+
+.form-col {
+	display: block;
+}
+
+form {
+	padding: 1em 1em 0 0;
+	margin: 0;
+	display: block;
+
+	input,
+	textarea, {
+		outline: none;
+		border: none;
+		border-bottom: 2px solid $med-grey;
+		width: 100%;
+		display: block;
+		position: relative;
+		padding: 0.5em;
+		transition: $medium;
+		font-family: inherit;
+		&:hover {
+			border-color: $dark-grey;
+		}
+		&:focus {
+			border-bottom: 2px solid $dark-grey;
+		}
+	}
+	button[name="submit"] {
+		border: 2px solid $med-grey;
+		border-radius: 3px;
+		background: $white;
+		padding: 0.7em;
+		cursor: pointer;
+		width: 100%;
+		transition: $medium;
+		font-family: inherit;
+		&:hover {
+			border-color: $dark-grey;
+		}
+	}
+	textarea[name="message"] {
+		resize: none;
+		height: 10em;
+	}
+}
+
+.contact-container {
+	padding: 1em;
+	
+	a {
+		margin: 2em 0;
+		display: block;
+	}
+}
+
+/*------------------------------------*\
+  #RESPONSIVE SETTINGS
+\*------------------------------------*/
+
+@media screen and (max-width: 438px) {
+	.site-nav__list {
+		flex-direction: column;
+		text-align: center;
+		a {
+			padding: 1em!important;
+			margin: 0!important;
+		}
+	}
+	.site-title {
+		font-size: 24px!important;
+	}
+}
+@media screen and (max-width: 1315px) {
+	.gallery-container__item {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 860px) {
+	.gallery-container__item {
+		width: 90%;
+	}
+	.site-nav {
+		display: block;
+		text-align: center;
+
+		.site-nav__list {
+			display: block;
+
+			.nav-item {
+				padding: 1em;
+				background-color: #e8e8e8;
+				border-radius: 0.3em;
+				border: 2px solid #DEDEDE;
+				&:hover {
+					background-color: #F5F5F5;
+				}
+			}
+		}
+	}
+}

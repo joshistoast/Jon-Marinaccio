@@ -1,0 +1,61 @@
+/**
+*  VARIABLE SETTINGS
+*  ---------------------------------------------------------------------------------
+*
+*  CONTENTS
+*  --------
+*  -Colors-
+*  Shades ........................ Shading Values
+*	 Gradients ..................... Gradient Values
+*
+*	 -Typography-
+*  Header Font ................... Header Font Configuration
+*	 Body Font ..................... Font Configuration for all regular text
+*
+*	 -Transitions-
+*  Slow .......................... Slow Transition Speed
+*	 Medium ........................ Default Transition Speed
+*  long .......................... Long Transition Speed
+*
+*
+*/
+
+
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+//Shades
+
+$white: #ffffff;
+$off-white: #f5f5f5;
+
+$light-grey: #efefef;
+$med-grey: #cccccc;
+$dark-grey: #8e8e8e;
+
+$off-black: #101111;
+$black: #000000;
+
+//Gradients
+
+$default-gradient: linear-gradient($light-grey,$med-grey);
+
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+//Body Font
+$body-font: Georgia, Times;
+//Header Font
+$header-font: $body-font;
+//Special Font
+$special-font: 'Copperplate Gothic';
+
+/*------------------------------------*\
+  #TRANSITIONS
+\*------------------------------------*/
+//Slow
+$slow: all 200ms ease;
+//Medium
+$medium: all 130ms ease;
+//Long
+$fast: all 80ms ease;
