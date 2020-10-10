@@ -234,7 +234,7 @@ form {
     form textarea:focus {
       border-bottom: 2px solid #8e8e8e;
       background: #efefef; }
-  form button[name="submit"] {
+  form button[id="submit"] {
     border: 2px solid #cccccc;
     border-radius: 3px;
     background: #ffffff;
@@ -244,11 +244,11 @@ form {
     transition: all 130ms ease;
     font-family: inherit;
     outline: none; }
-    form button[name="submit"]:hover {
+    form button[id="submit"]:hover {
       border-color: #8e8e8e; }
-    form button[name="submit"]:focus {
+    form button[id="submit"]:focus {
       background: #efefef; }
-  form textarea[name="message"] {
+  form textarea[id="message"] {
     resize: none;
     height: 10em; }
 
